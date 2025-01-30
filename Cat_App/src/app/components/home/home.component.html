@@ -1,0 +1,11 @@
+<!-- HOMEPAGE DISPLAYS A RANDOM CATS -->
+<div class="container text-center">
+  <div class="card">
+    <img [src]="catImageUrl" class="card-img-top" alt="Random Cat" [width]="catImgSizeWidth" [height]="catImgSizeHeight">
+    <div class="card-body">
+      <h5 class="card-title">Generate Random Cute Pictures of Cat</h5>
+      <p class="card-text">👉 Click the button below to generate your random cat pic and fall in love with a new feline friend!</p>
+      <button class="btn btn-primary mt-3" (click)="fetchRandomCat()">Get Another Cat</button>
+    </div>
+  </div>
+</div>
