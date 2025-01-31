@@ -1,11 +1,14 @@
 .navbar {
-    background-color: #4CAF50; /* Green color */
+    background-color: #73C7C7; /* Green color */
 }
 
 .nav-item{
     cursor: pointer;
+    a{
+        color: black;
+    }
     a:hover{
-        color: wheat;
+        color: white;
     }
 }
 

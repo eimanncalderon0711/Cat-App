@@ -3,7 +3,13 @@
     max-width: 650px;
 }
 
-// .card-img-top{
-//     max-width: 500;
-//     max-height: 400;
-// }
+button{
+    background-color: #F4F8D3;
+    border: none;
+    color: black;
+    box-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.3);
+}
+
+button:hover{
+    background-color: #73C7C7;
+}

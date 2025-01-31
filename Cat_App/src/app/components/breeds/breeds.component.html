@@ -5,15 +5,18 @@
         
         <!-- LIST OF BREED OF CATS -->
         @for(breed of breeds; track breed.id){
-            <div class="col" [routerLink]="['/breeds', breed.id]">
+            
+            <div class="col" >
                 <div class="card h-100" style="width: 400px;"> <!-- Added h-100 to make cards full height -->
-                    <img [src]="breed.image.url" class="card-img-top" alt="cat-image" width="350" height="250"> <!-- Added img-fluid for responsive images -->
+                    <img [src]="breed.image" (error)="onImageError($event)" class="card-img-top" alt="cat-image" width="350" height="250"> <!-- Added img-fluid for responsive images -->
                     <div class="card-body d-flex flex-column"> <!-- Added flexbox for consistent card body -->
                         <h5 class="card-title">{{breed.name}}</h5>
-                        <p class="card-text flex-grow-1">{{breed.description}}</p> <!-- Added flex-grow-1 to make description fill space -->
-                        <button href="#" class="btn btn-primary mt-auto">Add to favorites</button> <!-- Added mt-auto to align button at the bottom -->
+                        <p [routerLink]="['/breeds', breed.id]" class="card-text flex-grow-1">{{breed.description}}</p> <!-- Added flex-grow-1 to make description fill space -->
+                        <button (click)="addToFav(breed.id)" class="btn mt-auto">Add to favorites</button> <!-- Added mt-auto to align button at the bottom -->
                     </div>
                 </div>
-            </div>}
+            </div>
+        }
+        
     </div>
 </div>
