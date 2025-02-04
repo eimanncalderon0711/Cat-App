@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CatService } from '../../services/cat.service.spec';
+import { CatService } from '../../services/cat.service';
 import { ActivatedRoute } from '@angular/router';
 
 

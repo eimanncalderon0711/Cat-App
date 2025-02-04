@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CatService } from '../../services/cat.service.spec';
+import { CatService } from '../../services/cat.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 //CREATE INTERFACE TO PROVIDE TYPES TO BREEDS ATTRIBUTES
@@ -12,7 +12,7 @@ export interface Breed{
 
 @Component({
   selector: 'app-breeds',
-  imports: [RouterLink, RouterOutlet],
+  imports: [RouterLink],
   templateUrl: './breeds.component.html',
   styleUrl: './breeds.component.scss'
 })
