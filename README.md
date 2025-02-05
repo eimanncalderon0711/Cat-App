@@ -19,11 +19,11 @@ This is a simple Angular application that provides a collection of cat-related f
 - [Overview](#overview)
 - [App Structure](#app-structure)
 - [Components](#components)
-  - [AppComponent](#appcomponent)
-  - [HomeComponent](#homecomponent)
-  - [FavoritesComponent](#favoritescomponent)
-  - [BreedsComponent](#breedscomponent)
-  - [BreedDetailsComponent](#breeddetailscomponent)
+  - [AppComponent](#app-component)
+  - [HomeComponent](#home-component)
+  - [FavoritesComponent](#favorites-component)
+  - [BreedsComponent](#breeds-component)
+  - [BreedDetailsComponent](#breed-details-component)
 - [Services](#services)
 - [Setup](#setup)
 - [Setup API environment](#setup-api-environment)
@@ -168,7 +168,7 @@ The app contains the following core components:
 
 
 
-### BreedDetails Component
+### Breed Details Component
 
 - **Location**: `breed-details.component.ts`
 - **Description**: Displays detailed information about a specific cat breed. The component uses route parameters to fetch and display breed details.
