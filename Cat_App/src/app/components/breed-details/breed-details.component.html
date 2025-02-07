@@ -1,0 +1,30 @@
+<!-- BREED DETAILS PAGE -->
+<h1 style="text-align: center;">Breed Details</h1>
+
+ <!-- VIEW DETAIL CARD OF SINGLE CAT -->
+ <div class="container d-flex flex-column items align-items-center">
+    <img [src]="breedDetails.image" alt="cat" class="mb-3">
+    <h2 class="mt-2">{{ breedDetails.name }}</h2>
+    <div class="accordion w-100 w-md-50 mt-2" id="accordionExample">
+        <div class="accordion-item mb-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              View More Details
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse hide" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong><i>Affection Level: </i></strong>{{breedDetails.affection_level}}<br>
+              <strong><i>Life Span: </i></strong>{{breedDetails.life_span}} years<br>
+              <strong><i>Origin: </i></strong>{{breedDetails.origin}}<br>
+              <strong><i>Temperament: </i></strong>{{breedDetails.temperament}}<br>
+              <strong><i>Adaptability: </i></strong>{{breedDetails.adaptability}}<br>
+            </div>
+            <div class="accordion-body">
+                <strong><i>Description:</i></strong><br>
+                <span>{{breedDetails.description}}</span>
+            </div>
+          </div>
+        </div>
+
+</div>

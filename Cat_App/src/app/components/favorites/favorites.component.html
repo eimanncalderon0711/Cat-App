@@ -1,0 +1,10 @@
+<div class="vstack gap-3">
+    <h1>List of your Favorites</h1>
+    <!-- LIST ALL THE FAVORITE CATS USING CONTROL FLOW -->
+    @for(favorite of favorites; track $index){
+        <div class="p-4 d-flex align-items-center flex-1 border shadow-sm">
+            <img [src]="favorite.image_url" (error)="onImageError($event)" alt="" style="border-radius: 100%;" width="200" height="200">
+            <p style="font-size: 35px; margin: 0 auto;">{{favorite.name}}</p>
+        </div>
+    }
+</div>
