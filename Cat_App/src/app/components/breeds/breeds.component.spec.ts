@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { CatService } from '../../services/cat.service';
 import { BreedsComponent } from './breeds.component';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
 import { provideHttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
@@ -129,4 +129,16 @@ describe('BreedsComponent', () => {
     // Verify that an alert was displayed with a success message
     expect(window.alert).toHaveBeenCalledWith('Data sent successfully!');
   });
+
+  it('should log an error to the console when the API call fails', () => {
+
+    const mockError = new Error('Failed to add to favorites');
+    spyOn(catService, 'postData').and.returnValue(throwError(() => mockError)); // Simulate an error
+    spyOn(console, 'error'); // Spy on console.error
+
+    component.addToFav('123');
+
+    expect(console.error).toHaveBeenCalledWith(mockError); // Verify console.error was called with the error
+  });
+
 });

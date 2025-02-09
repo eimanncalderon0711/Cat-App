@@ -62,7 +62,7 @@ export class BreedsComponent {
         //TEMPORARY ALERT THE USER IF THE DATA IS SUCCESSFULY ADDED TO THE FAVORITES
         alert('Data sent successfully!');
       },
-      error: (err) => console.log(err),
+      error: (err) => console.error(err),
     })
   }
 }
